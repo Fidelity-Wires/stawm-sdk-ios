@@ -6,7 +6,7 @@ Taqion SDK for iOS
 ### 1. Add a line to `Cartfile`
 
 ```console
-$ git "git@github.com:FidelityWires/tachyon-sdk-swift.git" "v0.7.4"
+$ git "git@github.com:FidelityWires/taqion-sdk-ios.git" "v0.7.4"
 ```
 
 ### 2. Add frameworks to setting
