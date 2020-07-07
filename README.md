@@ -34,3 +34,27 @@ $(SRCROOT)/Carthage/Build/iOS/TaqionNetstatus.framework
 $(SRCROOT)/Carthage/Build/iOS/TaqionTraceroute.framework
 $(SRCROOT)/Carthage/Build/iOS/TaqionSpeedTest.framework
 ```
+
+## Debugging
+### 1. Add debug mode setting.
+**Product -> Scheme -> Edit Scheme** and set `-STAWNDebugEnabled` as `Aguments Passed On Launch`
+### 2. Add code
+
+ ```
+let serviceStatusInspector = ServiceStatusInspector()
+
+let _ = serviceStatusInspector
+    .setDebug(settings: [
+        .init(service: .googlePlus, isAvailable: false),
+        .init(service: .googleCalendar, isAvailable: false),
+        .init(service: .googleMaps, isAvailable: false),
+    ])
+ ```
+
+## Running Example App
+### To run the example app:
+1. Download `Carthage.framework.zip` from [latest release](https://github.com/FidelityWires/taqion-sdk-ios/releases)
+2. Run `$ unzip Taqion.framework.zip # output Carthage directory`
+3. Run `$ mv Carthage/Build/iOS/*.framework taqion-sdk-ios/Example/Example`
+4. Open `Example.xcodeproj`
+5. Build and run the project
