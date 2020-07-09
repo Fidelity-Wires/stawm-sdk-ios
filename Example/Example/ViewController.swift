@@ -99,6 +99,6 @@ extension Sequence where Element == ServiceStatus {
                 return serviceStatus.service.service?.rawValue
             }
             return nil
-        }.joined(separator: ", ")
+        }.joined(separator: "\n")
     }
 }
