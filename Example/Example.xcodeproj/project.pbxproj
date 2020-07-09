@@ -7,36 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87B4009F24B43D9700B1ECA4 /* TaqionNetstatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009A24B43D9700B1ECA4 /* TaqionNetstatus.framework */; };
+		87B400A024B43D9700B1ECA4 /* TaqionNetstatus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009A24B43D9700B1ECA4 /* TaqionNetstatus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B400A124B43D9700B1ECA4 /* TaqionSpeedTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009B24B43D9700B1ECA4 /* TaqionSpeedTest.framework */; };
+		87B400A224B43D9700B1ECA4 /* TaqionSpeedTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009B24B43D9700B1ECA4 /* TaqionSpeedTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B400A324B43D9700B1ECA4 /* TaqionTraceroute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009C24B43D9700B1ECA4 /* TaqionTraceroute.framework */; };
+		87B400A424B43D9700B1ECA4 /* TaqionTraceroute.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009C24B43D9700B1ECA4 /* TaqionTraceroute.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B400A524B43D9700B1ECA4 /* TaqionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009D24B43D9700B1ECA4 /* TaqionCore.framework */; };
+		87B400A624B43D9700B1ECA4 /* TaqionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009D24B43D9700B1ECA4 /* TaqionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B400A724B43D9700B1ECA4 /* Taqion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009E24B43D9700B1ECA4 /* Taqion.framework */; };
+		87B400A824B43D9700B1ECA4 /* Taqion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87B4009E24B43D9700B1ECA4 /* Taqion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */; };
+		87B400AC24B4795900B1ECA4 /* DebugSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */; };
 		87CC1C3024A075FC00EF5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */; };
 		87CC1C3224A075FC00EF5F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */; };
 		87CC1C3424A075FC00EF5F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C3324A075FC00EF5F3C /* ViewController.swift */; };
 		87CC1C3724A075FC00EF5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87CC1C3524A075FC00EF5F3C /* Main.storyboard */; };
 		87CC1C3924A075FE00EF5F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87CC1C3824A075FE00EF5F3C /* Assets.xcassets */; };
 		87CC1C3C24A075FE00EF5F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87CC1C3A24A075FE00EF5F3C /* LaunchScreen.storyboard */; };
-		87E60E9824B4292000049A12 /* TaqionNetstatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9324B4292000049A12 /* TaqionNetstatus.framework */; };
-		87E60E9924B4292000049A12 /* TaqionNetstatus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9324B4292000049A12 /* TaqionNetstatus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		87E60E9A24B4292000049A12 /* Taqion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9424B4292000049A12 /* Taqion.framework */; };
-		87E60E9B24B4292000049A12 /* Taqion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9424B4292000049A12 /* Taqion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		87E60E9C24B4292000049A12 /* TaqionSpeedTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9524B4292000049A12 /* TaqionSpeedTest.framework */; };
-		87E60E9D24B4292000049A12 /* TaqionSpeedTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9524B4292000049A12 /* TaqionSpeedTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		87E60E9E24B4292000049A12 /* TaqionTraceroute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9624B4292000049A12 /* TaqionTraceroute.framework */; };
-		87E60E9F24B4292000049A12 /* TaqionTraceroute.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9624B4292000049A12 /* TaqionTraceroute.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		87E60EA024B4292000049A12 /* TaqionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9724B4292000049A12 /* TaqionCore.framework */; };
-		87E60EA124B4292000049A12 /* TaqionCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87E60E9724B4292000049A12 /* TaqionCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		87E60EA224B4292000049A12 /* Embed Frameworks */ = {
+		87B4009924B43D2D00B1ECA4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				87E60E9F24B4292000049A12 /* TaqionTraceroute.framework in Embed Frameworks */,
-				87E60E9B24B4292000049A12 /* Taqion.framework in Embed Frameworks */,
-				87E60EA124B4292000049A12 /* TaqionCore.framework in Embed Frameworks */,
-				87E60E9924B4292000049A12 /* TaqionNetstatus.framework in Embed Frameworks */,
-				87E60E9D24B4292000049A12 /* TaqionSpeedTest.framework in Embed Frameworks */,
+				87B400A224B43D9700B1ECA4 /* TaqionSpeedTest.framework in Embed Frameworks */,
+				87B400A824B43D9700B1ECA4 /* Taqion.framework in Embed Frameworks */,
+				87B400A624B43D9700B1ECA4 /* TaqionCore.framework in Embed Frameworks */,
+				87B400A424B43D9700B1ECA4 /* TaqionTraceroute.framework in Embed Frameworks */,
+				87B400A024B43D9700B1ECA4 /* TaqionNetstatus.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +46,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		87B4009A24B43D9700B1ECA4 /* TaqionNetstatus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionNetstatus.framework; path = Example/TaqionNetstatus.framework; sourceTree = "<group>"; };
+		87B4009B24B43D9700B1ECA4 /* TaqionSpeedTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionSpeedTest.framework; path = Example/TaqionSpeedTest.framework; sourceTree = "<group>"; };
+		87B4009C24B43D9700B1ECA4 /* TaqionTraceroute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionTraceroute.framework; path = Example/TaqionTraceroute.framework; sourceTree = "<group>"; };
+		87B4009D24B43D9700B1ECA4 /* TaqionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionCore.framework; path = Example/TaqionCore.framework; sourceTree = "<group>"; };
+		87B4009E24B43D9700B1ECA4 /* Taqion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Taqion.framework; path = Example/Taqion.framework; sourceTree = "<group>"; };
+		87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingViewController.swift; sourceTree = "<group>"; };
+		87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingCell.swift; sourceTree = "<group>"; };
 		87CC1C2C24A075FC00EF5F3C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,11 +61,6 @@
 		87CC1C3824A075FE00EF5F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87CC1C3B24A075FE00EF5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87CC1C3D24A075FE00EF5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87E60E9324B4292000049A12 /* TaqionNetstatus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionNetstatus.framework; path = Carthage/Build/iOS/TaqionNetstatus.framework; sourceTree = "<group>"; };
-		87E60E9424B4292000049A12 /* Taqion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Taqion.framework; path = Carthage/Build/iOS/Taqion.framework; sourceTree = "<group>"; };
-		87E60E9524B4292000049A12 /* TaqionSpeedTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionSpeedTest.framework; path = Carthage/Build/iOS/TaqionSpeedTest.framework; sourceTree = "<group>"; };
-		87E60E9624B4292000049A12 /* TaqionTraceroute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionTraceroute.framework; path = Carthage/Build/iOS/TaqionTraceroute.framework; sourceTree = "<group>"; };
-		87E60E9724B4292000049A12 /* TaqionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionCore.framework; path = Carthage/Build/iOS/TaqionCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87E60E9E24B4292000049A12 /* TaqionTraceroute.framework in Frameworks */,
-				87E60E9A24B4292000049A12 /* Taqion.framework in Frameworks */,
-				87E60EA024B4292000049A12 /* TaqionCore.framework in Frameworks */,
-				87E60E9824B4292000049A12 /* TaqionNetstatus.framework in Frameworks */,
-				87E60E9C24B4292000049A12 /* TaqionSpeedTest.framework in Frameworks */,
+				87B400A124B43D9700B1ECA4 /* TaqionSpeedTest.framework in Frameworks */,
+				87B400A724B43D9700B1ECA4 /* Taqion.framework in Frameworks */,
+				87B400A524B43D9700B1ECA4 /* TaqionCore.framework in Frameworks */,
+				87B400A324B43D9700B1ECA4 /* TaqionTraceroute.framework in Frameworks */,
+				87B4009F24B43D9700B1ECA4 /* TaqionNetstatus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,8 @@
 				87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */,
 				87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */,
 				87CC1C3324A075FC00EF5F3C /* ViewController.swift */,
+				87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */,
+				87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */,
 				87CC1C3524A075FC00EF5F3C /* Main.storyboard */,
 				87CC1C3824A075FE00EF5F3C /* Assets.xcassets */,
 				87CC1C3A24A075FE00EF5F3C /* LaunchScreen.storyboard */,
@@ -109,11 +115,11 @@
 		87CC1C4324A081D300EF5F3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87E60E9424B4292000049A12 /* Taqion.framework */,
-				87E60E9724B4292000049A12 /* TaqionCore.framework */,
-				87E60E9324B4292000049A12 /* TaqionNetstatus.framework */,
-				87E60E9524B4292000049A12 /* TaqionSpeedTest.framework */,
-				87E60E9624B4292000049A12 /* TaqionTraceroute.framework */,
+				87B4009E24B43D9700B1ECA4 /* Taqion.framework */,
+				87B4009D24B43D9700B1ECA4 /* TaqionCore.framework */,
+				87B4009A24B43D9700B1ECA4 /* TaqionNetstatus.framework */,
+				87B4009B24B43D9700B1ECA4 /* TaqionSpeedTest.framework */,
+				87B4009C24B43D9700B1ECA4 /* TaqionTraceroute.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,8 +134,7 @@
 				87CC1C2824A075FC00EF5F3C /* Sources */,
 				87CC1C2924A075FC00EF5F3C /* Frameworks */,
 				87CC1C2A24A075FC00EF5F3C /* Resources */,
-				87CC1C4E24A081DF00EF5F3C /* Carthage */,
-				87E60EA224B4292000049A12 /* Embed Frameworks */,
+				87B4009924B43D2D00B1ECA4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,32 +191,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		87CC1C4E24A081DF00EF5F3C /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Taqion.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionNetstatus.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionTraceroute.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionSpeedTest.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		87CC1C2824A075FC00EF5F3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -219,6 +198,8 @@
 			files = (
 				87CC1C3424A075FC00EF5F3C /* ViewController.swift in Sources */,
 				87CC1C3024A075FC00EF5F3C /* AppDelegate.swift in Sources */,
+				87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */,
+				87B400AC24B4795900B1ECA4 /* DebugSettingCell.swift in Sources */,
 				87CC1C3224A075FC00EF5F3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +349,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Example",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -392,6 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Example",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
