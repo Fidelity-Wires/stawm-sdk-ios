@@ -55,6 +55,6 @@ let _ = serviceStatusInspector
 ### To run the example app:
 1. Download `Carthage.framework.zip` from [latest release](https://github.com/FidelityWires/taqion-sdk-ios/releases)
 2. Run `$ unzip Taqion.framework.zip # output Carthage directory`
-3. Run `$ mv Carthage/Build/iOS/*.framework taqion-sdk-ios/Example/Example`
+3. Run `$ mv Carthage path/to/taqion-sdk-ios/Example/`
 4. Open `Example.xcodeproj`
 5. Build and run the project
