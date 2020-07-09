@@ -101,7 +101,7 @@
 				87CC1C2824A075FC00EF5F3C /* Sources */,
 				87CC1C2924A075FC00EF5F3C /* Frameworks */,
 				87CC1C2A24A075FC00EF5F3C /* Resources */,
-				87B400F124B7032100B1ECA4 /* ShellScript */,
+				87B400F124B7032100B1ECA4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -159,7 +159,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		87B400F124B7032100B1ECA4 /* ShellScript */ = {
+		87B400F124B7032100B1ECA4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,6 +173,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/TaqionSpeedTest.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TaqionNetstatus.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
