@@ -52,23 +52,23 @@ final class ViewController: UIViewController {
         serviceStatusInspector.inspect(
             services: services,
             completion: { (result) in
-                switch result {
-                case .success(let status):
-
-                    if status.isAllAvailable() {
+                DispatchQueue.main.async { // Because needs to update UI.
+                    switch result {
+                    case .success(let status) where status.isAllAvailable():
                         // All serivces are available.
                         self.availableView.isHidden = false
                         self.notAvailableView.isHidden = true
-                    } else {
+                    case .success(let status):
                         // Some services are not available.
                         self.availableView.isHidden = true
                         self.notAvailableView.isHidden = false
                         self.label.text = status.serviceStatuses.unavailableServices()
+                    case .failure(let error):
+                        // Handle inspection error.
+                        print(error.localizedDescription)
                     }
-                case .failure(let error):
-                    // Handle inspection error.
-                    print(error.localizedDescription)
                 }
+
         })
     }
 
