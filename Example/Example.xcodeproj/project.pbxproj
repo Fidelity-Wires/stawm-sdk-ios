@@ -167,21 +167,21 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Taqion.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionTraceroute.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionSpeedTest.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/TaqionNetstatus.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Stawm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/StawmCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/StawmTraceroute.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/StawmSpeedTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/StawmNetstatus.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Taqion.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TaqionCore.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TaqionTraceroute.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TaqionSpeedTest.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/TaqionNetstatus.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Stawm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmCore.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmTraceroute.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmSpeedTest.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmNetstatus.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

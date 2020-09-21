@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Taqion
-import TaqionCore
+import Stawm
+import StawmCore
 
 final class ViewController: UIViewController {
 
@@ -34,7 +34,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Set API Key.
-        Taqion.sharedInstance().setApiKey("xxxxx")
+        Stawm.sharedInstance().setApiKey("xxxxx")
 
         let _ = serviceStatusInspector
 
