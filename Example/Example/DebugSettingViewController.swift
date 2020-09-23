@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TaqionCore
+import StawmCore
 
 protocol DebugSettingViewControllerDelegate: class {
 
