@@ -6,7 +6,7 @@ Stawm SDK for iOS
 ### 1. Add a line to `Cartfile`
 
 ```Cartfile
-git "git@github.com:FidelityWires/stawm-sdk-ios.git" "v0.7.6"
+git "git@github.com:FidelityWires/stawm-sdk-ios.git" "v0.8.4"
 ```
 
 ### 2. Add frameworks to setting
@@ -45,9 +45,9 @@ let serviceStatusInspector = ServiceStatusInspector()
 
 let _ = serviceStatusInspector
     .setDebug(settings: [
-        .init(service: .googlePlus, isAvailable: false),
-        .init(service: .googleCalendar, isAvailable: false),
-        .init(service: .googleMaps, isAvailable: false),
+        .init(service: .googlePlus, status: .red),
+        .init(service: .googleCalendar, status: .red),
+        .init(service: .googleMaps, status: .red),
     ])
  ```
 

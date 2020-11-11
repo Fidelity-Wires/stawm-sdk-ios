@@ -56,7 +56,7 @@ extension DebugSettingViewController: UITableViewDataSource {
             for: indexPath) as! DebugSettingCell
         let setting = settings[indexPath.row]
         cell.delegate = self
-        cell.configure(name: setting.service.rawValue, isOn: setting.isAvailable, at: indexPath)
+        cell.configure(name: setting.service.rawValue, isOn: setting.status == .green, at: indexPath)
         return cell
     }
 }
@@ -64,6 +64,7 @@ extension DebugSettingViewController: UITableViewDataSource {
 extension DebugSettingViewController: DebugSettingCellDelegate {
 
     func switchValueDidChange(to newValue: Bool, at indexPath: IndexPath) {
-        settings[indexPath.row] = .init(service: settings[indexPath.row].service, isAvailable: newValue)
+        let status: ServiceStatusInfo.Status = newValue ? .green : .red
+        settings[indexPath.row] = .init(service: settings[indexPath.row].service, status: status)
     }
 }

@@ -20,10 +20,10 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var label: UILabel!
 
     private var currentSettings: [ServiceStatusInspector.DebugSetting] = [
-        .init(service: .googleAnalytics, isAvailable: true),
-        .init(service: .googleConsole, isAvailable: true),
-        .init(service: .googleMaps, isAvailable: false),
-        .init(service: .googleDrive, isAvailable: false)
+        .init(service: .googleAnalytics, status: .green),
+        .init(service: .googleConsole, status: .green),
+        .init(service: .googleMaps, status: .red),
+        .init(service: .googleDrive, status: .red)
     ]
 
     private var services: [Service] {
@@ -95,8 +95,8 @@ extension Sequence where Element == ServiceStatus {
 
     func unavailableServices() -> String {
         self.compactMap { (serviceStatus) -> String? in
-            if !serviceStatus.isAvailable {
-                return serviceStatus.service.service?.rawValue
+            if !serviceStatus.info.isAvailable {
+                return serviceStatus.info.service.service?.rawValue
             }
             return nil
         }.joined(separator: "\n")
