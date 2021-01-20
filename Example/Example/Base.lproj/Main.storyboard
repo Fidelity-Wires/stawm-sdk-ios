@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utM-4p-l9q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qdb-hd-0G9">
+            <objects>
+                <tabBarController id="utM-4p-l9q" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Bh-5Q-b70">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6bZ-2x-eBN"/>
+                        <segue destination="UCd-Zb-SNd" kind="relationship" relationship="viewControllers" id="lLc-zA-O4s"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Edn-jE-0Bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="92"/>
+        </scene>
+        <!--Service Status-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,8 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-9w-dDh">
-                                <rect key="frame" x="157.5" y="752" width="99" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-9w-dDh">
+                                <rect key="frame" x="157.5" y="703" width="99" height="30"/>
                                 <state key="normal" title="Debug Setting"/>
                                 <connections>
                                     <action selector="buttonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpA-EN-dn0"/>
@@ -46,7 +65,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Not available: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8k-gS-gvq">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -61,7 +80,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="6IC-eW-ydO" secondAttribute="bottom" id="SXc-Mg-TYp"/>
                                                     <constraint firstItem="6IC-eW-ydO" firstAttribute="top" secondItem="GW3-CC-axk" secondAttribute="top" id="ohW-Hh-H9u"/>
@@ -74,7 +93,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ghd-LJ-2JA" secondAttribute="trailing" constant="40" id="1P9-8M-lCy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7aG-9w-dDh" secondAttribute="bottom" constant="80" id="51E-dU-RLm"/>
@@ -83,8 +103,8 @@
                             <constraint firstItem="Ghd-LJ-2JA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yej-Ni-J48"/>
                             <constraint firstItem="7aG-9w-dDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="re1-B9-pw5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Service Status" id="odE-Dq-Dwg"/>
                     <connections>
                         <outlet property="availableView" destination="rzG-Ua-Nts" id="jRn-he-bnN"/>
                         <outlet property="label" destination="6IC-eW-ydO" id="wUr-4C-VbE"/>
@@ -117,7 +137,7 @@
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-aN-xq8">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugSettingCell" rowHeight="48" id="pnb-QB-0bN" customClass="DebugSettingCell" customModule="Example" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="48"/>
@@ -161,7 +181,8 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="95H-IW-yhD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kaQ-sP-7pe" firstAttribute="top" secondItem="95H-IW-yhD" secondAttribute="top" id="Fg9-eZ-0YB"/>
                             <constraint firstItem="95H-IW-yhD" firstAttribute="bottom" secondItem="Uxp-aN-xq8" secondAttribute="bottom" id="Lfx-7m-F5r"/>
@@ -171,7 +192,6 @@
                             <constraint firstItem="Uxp-aN-xq8" firstAttribute="top" secondItem="kaQ-sP-7pe" secondAttribute="bottom" id="geF-GI-ECa"/>
                             <constraint firstItem="Uxp-aN-xq8" firstAttribute="leading" secondItem="95H-IW-yhD" secondAttribute="leading" id="lNj-62-G1h"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="95H-IW-yhD"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Uxp-aN-xq8" id="L9n-NT-gvt"/>
@@ -181,5 +201,58 @@
             </objects>
             <point key="canvasLocation" x="1079.7101449275362" y="83.705357142857139"/>
         </scene>
+        <!--Net Status-->
+        <scene sceneID="aNT-IU-iho">
+            <objects>
+                <viewController id="UCd-Zb-SNd" customClass="NetstatusViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mME-OY-yAu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Yjw-vU-nIN">
+                                <rect key="frame" x="123.5" y="403" width="167" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebr-xP-Hkg">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
+                                        <state key="normal" title="Start Speed Test"/>
+                                        <connections>
+                                            <action selector="speedTestButtonDidTap:" destination="UCd-Zb-SNd" eventType="touchUpInside" id="Z57-Ow-ACa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iaf-dr-w0k">
+                                        <rect key="frame" x="0.0" y="60" width="167" height="30"/>
+                                        <state key="normal" title="Start Monitor Net Status"/>
+                                        <connections>
+                                            <action selector="netstatusButtonDidTap:" destination="UCd-Zb-SNd" eventType="touchUpInside" id="yH4-aH-Jlw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kpR-ns-7MJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yjw-vU-nIN" firstAttribute="centerY" secondItem="mME-OY-yAu" secondAttribute="centerY" id="Gc8-S6-XXP"/>
+                            <constraint firstItem="Yjw-vU-nIN" firstAttribute="centerX" secondItem="mME-OY-yAu" secondAttribute="centerX" id="Qiy-tt-z3n"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Net Status" id="eqb-ap-OTz"/>
+                    <connections>
+                        <outlet property="netstatusButton" destination="Iaf-dr-w0k" id="MKY-ZS-DdB"/>
+                        <outlet property="speedTestButton" destination="ebr-xP-Hkg" id="kj4-Nk-8bU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwA-xU-eCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="797"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
