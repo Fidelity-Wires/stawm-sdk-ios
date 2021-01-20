@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Stawm
-import StawmCore
+import StawmServiceStatus
 
 final class ViewController: UIViewController {
 

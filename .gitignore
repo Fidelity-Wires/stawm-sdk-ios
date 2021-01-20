@@ -37,6 +37,9 @@ playground.xcworkspace
 
 # Carthage
 Carthage/
+
+# SDK
+SDK/
 .UlyssesRoot
 .Ulysses-Settings.plist
 .Ulysses-Group.plist

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,16 +15,36 @@
 		87CC1C3724A075FC00EF5F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87CC1C3524A075FC00EF5F3C /* Main.storyboard */; };
 		87CC1C3924A075FE00EF5F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87CC1C3824A075FE00EF5F3C /* Assets.xcassets */; };
 		87CC1C3C24A075FE00EF5F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87CC1C3A24A075FE00EF5F3C /* LaunchScreen.storyboard */; };
+		87ECEFDD25B82B3900C31EF1 /* StawmServiceStatus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFDC25B82B3900C31EF1 /* StawmServiceStatus.xcframework */; };
+		87ECEFDE25B82B3900C31EF1 /* StawmServiceStatus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFDC25B82B3900C31EF1 /* StawmServiceStatus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87ECF00025B8319500C31EF1 /* StawmNetstatus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFFD25B8319500C31EF1 /* StawmNetstatus.xcframework */; };
+		87ECF00125B8319500C31EF1 /* StawmNetstatus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFFD25B8319500C31EF1 /* StawmNetstatus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87ECF00225B8319500C31EF1 /* StawmTraceroute.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFFE25B8319500C31EF1 /* StawmTraceroute.xcframework */; };
+		87ECF00325B8319500C31EF1 /* StawmTraceroute.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFFE25B8319500C31EF1 /* StawmTraceroute.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87ECF00425B8319500C31EF1 /* StawmSpeedTest.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFFF25B8319500C31EF1 /* StawmSpeedTest.xcframework */; };
+		87ECF00525B8319500C31EF1 /* StawmSpeedTest.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 87ECEFFF25B8319500C31EF1 /* StawmSpeedTest.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		87ECEFDF25B82B3900C31EF1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				87ECF00125B8319500C31EF1 /* StawmNetstatus.xcframework in Embed Frameworks */,
+				87ECEFDE25B82B3900C31EF1 /* StawmServiceStatus.xcframework in Embed Frameworks */,
+				87ECF00525B8319500C31EF1 /* StawmSpeedTest.xcframework in Embed Frameworks */,
+				87ECF00325B8319500C31EF1 /* StawmTraceroute.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingViewController.swift; sourceTree = "<group>"; };
 		87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingCell.swift; sourceTree = "<group>"; };
-		87B400E224B7031800B1ECA4 /* TaqionSpeedTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionSpeedTest.framework; path = Carthage/Build/iOS/TaqionSpeedTest.framework; sourceTree = "<group>"; };
-		87B400E324B7031800B1ECA4 /* TaqionTraceroute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionTraceroute.framework; path = Carthage/Build/iOS/TaqionTraceroute.framework; sourceTree = "<group>"; };
-		87B400E424B7031800B1ECA4 /* TaqionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionCore.framework; path = Carthage/Build/iOS/TaqionCore.framework; sourceTree = "<group>"; };
-		87B400E524B7031800B1ECA4 /* TaqionNetstatus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionNetstatus.framework; path = Carthage/Build/iOS/TaqionNetstatus.framework; sourceTree = "<group>"; };
-		87B400E624B7031800B1ECA4 /* Taqion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Taqion.framework; path = Carthage/Build/iOS/Taqion.framework; sourceTree = "<group>"; };
 		87CC1C2C24A075FC00EF5F3C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +53,10 @@
 		87CC1C3824A075FE00EF5F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87CC1C3B24A075FE00EF5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87CC1C3D24A075FE00EF5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87ECEFDC25B82B3900C31EF1 /* StawmServiceStatus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmServiceStatus.xcframework; path = Example/SDK/StawmServiceStatus.xcframework; sourceTree = "<group>"; };
+		87ECEFFD25B8319500C31EF1 /* StawmNetstatus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmNetstatus.xcframework; path = Example/SDK/StawmNetstatus.xcframework; sourceTree = "<group>"; };
+		87ECEFFE25B8319500C31EF1 /* StawmTraceroute.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmTraceroute.xcframework; path = Example/SDK/StawmTraceroute.xcframework; sourceTree = "<group>"; };
+		87ECEFFF25B8319500C31EF1 /* StawmSpeedTest.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmSpeedTest.xcframework; path = Example/SDK/StawmSpeedTest.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +64,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87ECF00025B8319500C31EF1 /* StawmNetstatus.xcframework in Frameworks */,
+				87ECEFDD25B82B3900C31EF1 /* StawmServiceStatus.xcframework in Frameworks */,
+				87ECF00425B8319500C31EF1 /* StawmSpeedTest.xcframework in Frameworks */,
+				87ECF00225B8319500C31EF1 /* StawmTraceroute.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,11 +110,10 @@
 		87CC1C4324A081D300EF5F3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87B400E624B7031800B1ECA4 /* Taqion.framework */,
-				87B400E424B7031800B1ECA4 /* TaqionCore.framework */,
-				87B400E524B7031800B1ECA4 /* TaqionNetstatus.framework */,
-				87B400E224B7031800B1ECA4 /* TaqionSpeedTest.framework */,
-				87B400E324B7031800B1ECA4 /* TaqionTraceroute.framework */,
+				87ECEFFD25B8319500C31EF1 /* StawmNetstatus.xcframework */,
+				87ECEFFF25B8319500C31EF1 /* StawmSpeedTest.xcframework */,
+				87ECEFFE25B8319500C31EF1 /* StawmTraceroute.xcframework */,
+				87ECEFDC25B82B3900C31EF1 /* StawmServiceStatus.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,7 +128,7 @@
 				87CC1C2824A075FC00EF5F3C /* Sources */,
 				87CC1C2924A075FC00EF5F3C /* Frameworks */,
 				87CC1C2A24A075FC00EF5F3C /* Resources */,
-				87B400F124B7032100B1ECA4 /* Carthage */,
+				87ECEFDF25B82B3900C31EF1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,37 +184,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		87B400F124B7032100B1ECA4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Stawm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmTraceroute.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmSpeedTest.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmNetstatus.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Stawm.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmCore.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmTraceroute.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmSpeedTest.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmNetstatus.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87CC1C2824A075FC00EF5F3C /* Sources */ = {
