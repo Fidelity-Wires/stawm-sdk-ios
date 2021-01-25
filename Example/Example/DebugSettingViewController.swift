@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import StawmCore
+import StawmServiceStatus
 
 protocol DebugSettingViewControllerDelegate: class {
 
