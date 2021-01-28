@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "stawm-sdk-ios",
+        "repositoryURL": "https://github.com/FidelityWires/stawm-sdk-ios",
+        "state": {
+          "branch": null,
+          "revision": "5e4c8cf24cdef4155fda936777e1a401a8b4316f",
+          "version": "0.8.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
