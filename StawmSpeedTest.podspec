@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "StawmSpeedTest"
   spec.version      = "0.8.6"
-  spec.summary      = "Supports measurement of Internet speed and ping used in iOS applications."
+  spec.summary      = "Measure the internet speed or ping used by the iOS app and send the results to the specified destination."
   spec.homepage     = "https://github.com/FidelityWires/stawm-sdk-ios"
   spec.license      = "See https://github.com/FidelityWires/stawm-sdk-ios/blob/master/LICENSE"
   spec.author       = "Fidelity Wires Inc."
