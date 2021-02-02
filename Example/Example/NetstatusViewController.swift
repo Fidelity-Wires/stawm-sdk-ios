@@ -100,6 +100,10 @@ extension NetstatusViewController: SpeedDataCollectorDelegate {
         isMeasuring = false
     }
 
+    func didFinishDataCollecting() {
+        print(didFinishDataCollecting)
+    }
+
     func didFailToCompleteSpeedTest(error: Error) {
         print("didFailToCompleteSpeedTest: \(error.localizedDescription)")
     }
@@ -116,13 +120,13 @@ extension NetstatusViewController: SpeedDataCollectorDelegate {
 
 final class SampleUploader: StawmSpeedTest.UploaderProtocol, StawmNetstatus.UploaderProtocol {
 
-    func upload(data: [StawmNetstatus.MeasurementResult], completion: @escaping (Error?) -> Void) {
+    func upload(data: [StawmNetstatus.UploadData], completion: @escaping (Error?) -> Void) {
         print("StawmNetstatus Result: \(data)")
         completion(nil)
     }
 
 
-    func upload(data: [StawmSpeedTest.MeasurementResult], completion: @escaping (Error?) -> Void) {
+    func upload(data: [StawmSpeedTest.UploadData], completion: @escaping (Error?) -> Void) {
         print("StawmSpeedTest Result: \(data)")
         completion(nil)
     }
