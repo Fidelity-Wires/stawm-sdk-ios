@@ -8,6 +8,9 @@ Stawm SDK for iOS
 |StawmNetstatus|It collects various data about the network used by the iOS app and sends the results to the specified destination.|
 |StawmTraceroute|Measure the speed and ping of the network that the iOS app is using.|
 
+
+This SDK comprises four separate components in the following way:
+
 ```
 ┌────────────────────┐    ┌────────────────────┐    ┌────────────────────┐
 │ StawmServiceStatus │    │   StawmSpeedTest   │    │   StawmNetstatus   │
@@ -18,6 +21,8 @@ Stawm SDK for iOS
                           └──────────────────────────────────────────────┘
 ```
 
+So **`StawmTraceroute` is required** when you use `StawmSpeedTest` or `StawmNetstatus`.
+
 # Installation
 
 ## Swift Package Manager
@@ -27,7 +32,10 @@ Stawm SDK for iOS
 4. Select "Up to Next Major" with "0.8.6"
 
 ## CocoaPods
-Currently not supported.
+
+```
+pod 'stawm-sdk-ios'
+```
 
 ## Download the XCFrameworks from [Releases](https://github.com/FidelityWires/stawm-sdk-ios/releases)
 
