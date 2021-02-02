@@ -44,6 +44,9 @@ Currently not supported.
 
 # Usage
 
+Please add the `NSLocationWhenInUseUsageDescription` key to your app’s Info.plist file. If the required key isn’t present, location information cannot be collected.
+
+
 
 # Debugging
 
