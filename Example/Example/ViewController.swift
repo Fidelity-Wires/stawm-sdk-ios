@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Stawm
-import StawmCore
+import StawmServiceStatus
 
 final class ViewController: UIViewController {
 
+    // MARK: - StawmServiceStatus
     /// Initialize `ServiceStatusInspector`
     private let serviceStatusInspector = ServiceStatusInspector()
 
@@ -30,11 +30,12 @@ final class ViewController: UIViewController {
         currentSettings.map({ $0.service })
     }
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Set API Key.
-        Stawm.sharedInstance().setApiKey("xxxxx")
+        ServiceStatusInspector.setApiKey("xxxxx")
 
         let _ = serviceStatusInspector
 

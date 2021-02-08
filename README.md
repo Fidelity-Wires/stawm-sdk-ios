@@ -1,46 +1,71 @@
 # stawm-sdk-ios
 Stawm SDK for iOS
 
-## Integration
+| Name |  |
+| --- | --- |
+|StawmServiceStatus|It acquires the operational status of third party services and switches between pre-defined actions in the iOS app according to each status.|
+|StawmSpeedTest|Measure the internet speed or ping used by the iOS app and send the results to the specified destination.|
+|StawmNetstatus|It collects various data about the network used by the iOS app and sends the results to the specified destination.|
+|StawmTraceroute|Measure the speed and ping of the network that the iOS app is using.|
 
-### 1. Add a line to `Cartfile`
 
-```Cartfile
-git "git@github.com:FidelityWires/stawm-sdk-ios.git" "v0.8.4"
-```
-
-### 2. Add frameworks to setting
-
-Add frameworks to  `Build Phases > Link Binary With Libraries` below:
+This SDK comprises four separate components in the following way:
 
 ```
-Stawm.framework
-StawmCore.framework
-StawmTraceroute.framework
-StawmNetstatus.framework
-StawmSpeedtest.framework
+┌────────────────────┐    ┌────────────────────┐    ┌────────────────────┐
+│ StawmServiceStatus │    │   StawmSpeedTest   │    │   StawmNetstatus   │
+└────────────────────┘    └──────────┬─────────┘    └──────────┬─────────┘
+                                     │                         │        
+                          ┌──────────▼─────────────────────────▼─────────┐
+                          │               StawmTraceroute                │
+                          └──────────────────────────────────────────────┘
 ```
 
-### 3. Add run script
+So **`StawmTraceroute` is required** when you use `StawmSpeedTest` or `StawmNetstatus`.
 
-Add copy-frameworks to `Build Phases > RunScript` below:
+# Installation
+
+## Swift Package Manager
+1. Open your Xcode project
+2. File > Swift Packages > Add Package Dependency
+3. Add `https://github.com/FidelityWires/stawm-sdk-ios`
+4. Select "Up to Next Major" with "0.8.6"
+
+## CocoaPods
 
 ```
-/usr/local/bin/carthage copy-frameworks
-
-$(SRCROOT)/Carthage/Build/iOS/Stawm.framework
-$(SRCROOT)/Carthage/Build/iOS/StawmCore.framework
-$(SRCROOT)/Carthage/Build/iOS/StawmNetstatus.framework
-$(SRCROOT)/Carthage/Build/iOS/StawmTraceroute.framework
-$(SRCROOT)/Carthage/Build/iOS/StawmSpeedTest.framework
+pod 'stawm-sdk-ios'
 ```
 
-## Debugging
-### 1. Add debug mode setting.
-**Product -> Scheme -> Edit Scheme** and set `-STAWNDebugEnabled` as `Aguments Passed On Launch`
-### 2. Add code
+## Download the XCFrameworks from [Releases](https://github.com/FidelityWires/stawm-sdk-ios/releases)
 
- ```
+- [StawmNetstatus.xcframework](https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmNetstatus.xcframework.zip)
+- [StawmServiceStatus.xcframework](https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmServiceStatus.xcframework.zip)
+- [StawmSpeedTest.xcframework](https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmSpeedTest.xcframework.zip)
+- [StawmTraceroute.xcframework](https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmTraceroute.xcframework.zip)
+
+1. Download and unzip files
+2. Add the needed framework binaries to your project directory
+3. Open your Xcode project
+4. Select target's General tab
+4. Drag the framework binaries to your **Frameworks, Libraries, and Embedded Content** section
+
+# Usage
+
+Please add the `NSLocationWhenInUseUsageDescription` key to your app’s Info.plist file. If the required key isn’t present, location information cannot be collected.
+
+
+
+# Debugging
+
+## StawmServiceStatus
+
+1. Open your Xcode project
+2. Product > Scheme > Edit Scheme
+3. Set `-STAWNDebugEnabled` as `Aguments Passed On Launch`
+4. Add the following code
+
+```
 let serviceStatusInspector = ServiceStatusInspector()
 
 let _ = serviceStatusInspector
@@ -49,12 +74,5 @@ let _ = serviceStatusInspector
         .init(service: .googleCalendar, status: .red),
         .init(service: .googleMaps, status: .red),
     ])
- ```
+```
 
-## Running Example App
-### To run the example app:
-1. Download `Carthage.framework.zip` from [latest release](https://github.com/FidelityWires/stawm-sdk-ios/releases)
-2. Run `$ unzip Stawm.framework.zip # output Carthage directory`
-3. Run `$ mv Carthage path/to/stawm-sdk-ios/Example/`
-4. Open `Example.xcodeproj`
-5. Build and run the project

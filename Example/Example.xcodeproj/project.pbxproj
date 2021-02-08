@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8703C76925B8386700419D0F /* NetstatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703C76825B8386700419D0F /* NetstatusViewController.swift */; };
+		8731954F25C2AAAB00B6F894 /* StawmSpeedTest in Frameworks */ = {isa = PBXBuildFile; productRef = 8731954E25C2AAAB00B6F894 /* StawmSpeedTest */; };
+		8731955125C2AAAB00B6F894 /* StawmTraceroute in Frameworks */ = {isa = PBXBuildFile; productRef = 8731955025C2AAAB00B6F894 /* StawmTraceroute */; };
+		8731955325C2AAAB00B6F894 /* StawmServiceStatus in Frameworks */ = {isa = PBXBuildFile; productRef = 8731955225C2AAAB00B6F894 /* StawmServiceStatus */; };
+		8731955525C2AAAB00B6F894 /* StawmNetstatus in Frameworks */ = {isa = PBXBuildFile; productRef = 8731955425C2AAAB00B6F894 /* StawmNetstatus */; };
 		87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */; };
 		87B400AC24B4795900B1ECA4 /* DebugSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */; };
 		87CC1C3024A075FC00EF5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */; };
@@ -18,13 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8703C76825B8386700419D0F /* NetstatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetstatusViewController.swift; sourceTree = "<group>"; };
 		87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingViewController.swift; sourceTree = "<group>"; };
 		87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingCell.swift; sourceTree = "<group>"; };
-		87B400E224B7031800B1ECA4 /* TaqionSpeedTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionSpeedTest.framework; path = Carthage/Build/iOS/TaqionSpeedTest.framework; sourceTree = "<group>"; };
-		87B400E324B7031800B1ECA4 /* TaqionTraceroute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionTraceroute.framework; path = Carthage/Build/iOS/TaqionTraceroute.framework; sourceTree = "<group>"; };
-		87B400E424B7031800B1ECA4 /* TaqionCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionCore.framework; path = Carthage/Build/iOS/TaqionCore.framework; sourceTree = "<group>"; };
-		87B400E524B7031800B1ECA4 /* TaqionNetstatus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TaqionNetstatus.framework; path = Carthage/Build/iOS/TaqionNetstatus.framework; sourceTree = "<group>"; };
-		87B400E624B7031800B1ECA4 /* Taqion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Taqion.framework; path = Carthage/Build/iOS/Taqion.framework; sourceTree = "<group>"; };
 		87CC1C2C24A075FC00EF5F3C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +34,10 @@
 		87CC1C3824A075FE00EF5F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87CC1C3B24A075FE00EF5F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87CC1C3D24A075FE00EF5F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87ECEFDC25B82B3900C31EF1 /* StawmServiceStatus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmServiceStatus.xcframework; path = Example/SDK/StawmServiceStatus.xcframework; sourceTree = "<group>"; };
+		87ECEFFD25B8319500C31EF1 /* StawmNetstatus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmNetstatus.xcframework; path = Example/SDK/StawmNetstatus.xcframework; sourceTree = "<group>"; };
+		87ECEFFE25B8319500C31EF1 /* StawmTraceroute.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmTraceroute.xcframework; path = Example/SDK/StawmTraceroute.xcframework; sourceTree = "<group>"; };
+		87ECEFFF25B8319500C31EF1 /* StawmSpeedTest.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StawmSpeedTest.xcframework; path = Example/SDK/StawmSpeedTest.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8731954F25C2AAAB00B6F894 /* StawmSpeedTest in Frameworks */,
+				8731955525C2AAAB00B6F894 /* StawmNetstatus in Frameworks */,
+				8731955325C2AAAB00B6F894 /* StawmServiceStatus in Frameworks */,
+				8731955125C2AAAB00B6F894 /* StawmTraceroute in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +78,7 @@
 				87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */,
 				87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */,
 				87CC1C3324A075FC00EF5F3C /* ViewController.swift */,
+				8703C76825B8386700419D0F /* NetstatusViewController.swift */,
 				87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */,
 				87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */,
 				87CC1C3524A075FC00EF5F3C /* Main.storyboard */,
@@ -82,11 +92,10 @@
 		87CC1C4324A081D300EF5F3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87B400E624B7031800B1ECA4 /* Taqion.framework */,
-				87B400E424B7031800B1ECA4 /* TaqionCore.framework */,
-				87B400E524B7031800B1ECA4 /* TaqionNetstatus.framework */,
-				87B400E224B7031800B1ECA4 /* TaqionSpeedTest.framework */,
-				87B400E324B7031800B1ECA4 /* TaqionTraceroute.framework */,
+				87ECEFFD25B8319500C31EF1 /* StawmNetstatus.xcframework */,
+				87ECEFFF25B8319500C31EF1 /* StawmSpeedTest.xcframework */,
+				87ECEFFE25B8319500C31EF1 /* StawmTraceroute.xcframework */,
+				87ECEFDC25B82B3900C31EF1 /* StawmServiceStatus.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,13 +110,18 @@
 				87CC1C2824A075FC00EF5F3C /* Sources */,
 				87CC1C2924A075FC00EF5F3C /* Frameworks */,
 				87CC1C2A24A075FC00EF5F3C /* Resources */,
-				87B400F124B7032100B1ECA4 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				8731954E25C2AAAB00B6F894 /* StawmSpeedTest */,
+				8731955025C2AAAB00B6F894 /* StawmTraceroute */,
+				8731955225C2AAAB00B6F894 /* StawmServiceStatus */,
+				8731955425C2AAAB00B6F894 /* StawmNetstatus */,
+			);
 			productName = Example;
 			productReference = 87CC1C2C24A075FC00EF5F3C /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 87CC1C2324A075FC00EF5F3C;
+			packageReferences = (
+				8731954D25C2AAAB00B6F894 /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */,
+			);
 			productRefGroup = 87CC1C2D24A075FC00EF5F3C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -158,42 +175,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		87B400F124B7032100B1ECA4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Stawm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmTraceroute.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmSpeedTest.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/StawmNetstatus.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Stawm.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmCore.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmTraceroute.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmSpeedTest.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/StawmNetstatus.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		87CC1C2824A075FC00EF5F3C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8703C76925B8386700419D0F /* NetstatusViewController.swift in Sources */,
 				87CC1C3424A075FC00EF5F3C /* ViewController.swift in Sources */,
 				87CC1C3024A075FC00EF5F3C /* AppDelegate.swift in Sources */,
 				87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */,
@@ -410,6 +397,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8731954D25C2AAAB00B6F894 /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FidelityWires/stawm-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8731954E25C2AAAB00B6F894 /* StawmSpeedTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8731954D25C2AAAB00B6F894 /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */;
+			productName = StawmSpeedTest;
+		};
+		8731955025C2AAAB00B6F894 /* StawmTraceroute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8731954D25C2AAAB00B6F894 /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */;
+			productName = StawmTraceroute;
+		};
+		8731955225C2AAAB00B6F894 /* StawmServiceStatus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8731954D25C2AAAB00B6F894 /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */;
+			productName = StawmServiceStatus;
+		};
+		8731955425C2AAAB00B6F894 /* StawmNetstatus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8731954D25C2AAAB00B6F894 /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */;
+			productName = StawmNetstatus;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 87CC1C2424A075FC00EF5F3C /* Project object */;
 }
