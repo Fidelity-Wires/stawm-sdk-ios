@@ -33,17 +33,17 @@ let package = Package(
         .binaryTarget(
             name: "StawmNetstatus",
             url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmNetstatus.xcframework.zip",
-            checksum: "055ac2cd6dc31ead570b713c53a28a63cf4ff4abf58c92ae5c163e1f8b695891"),
+            checksum: "0b232ee795818272b401b502a690f1604c9e5073fe382c5cfb597fa72560f719"),
         .binaryTarget(
             name: "StawmTraceroute",
             url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmTraceroute.xcframework.zip",
-            checksum: "d3153b5b8844fb1c97763fe2b1ed58137e6fff5a525d0762ca4278319b26181b"),
+            checksum: "0b7a23b60da98fd1bb2d0713e8421367bde7b89bf182631b6a1faeff0608e363"),
         .binaryTarget(
             name: "StawmSpeedTest",
             url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmSpeedTest.xcframework.zip",
-            checksum: "c426506aae64bfc25ee424c158ec61db7d727a928dddf77274e0a92d379aeadc"),
+            checksum: "f36be5f12f9834f13fe2748ed257cf2a7bd9b3f23608dad6c486fc07ce8dc431"),
         .binaryTarget(
             name: "StawmServiceStatus",
             url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmServiceStatus.xcframework.zip",
-            checksum: "ee1316ae1ce00a897bb3d2f354622c55fe1e1ba3220f7fc3429c711dfb87315b"),    ]
+            checksum: "6925b9e17d9309295082c935ca3da97049617971bce78a4b9fbcf11fe5dac0a3"),    ]
 )
