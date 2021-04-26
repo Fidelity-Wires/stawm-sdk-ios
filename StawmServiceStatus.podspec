@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "StawmServiceStatus"
-  spec.version      = "0.8.7"
+  spec.version      = "0.8.8"
   spec.summary      = "It acquires the operational status of third party services and switches between pre-defined actions in the iOS app according to each status."
   spec.homepage     = "https://github.com/FidelityWires/stawm-sdk-ios"
   spec.license      = "See https://github.com/FidelityWires/stawm-sdk-ios/blob/master/LICENSE"

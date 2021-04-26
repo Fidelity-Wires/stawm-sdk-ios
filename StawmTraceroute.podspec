@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "StawmTraceroute"
-  spec.version      = "0.8.7"
+  spec.version      = "0.8.8"
   spec.summary      = "Measure the speed and ping of the network that the iOS app is using."
   spec.homepage     = "https://github.com/FidelityWires/stawm-sdk-ios"
   spec.license      = "See https://github.com/FidelityWires/stawm-sdk-ios/blob/master/LICENSE"
