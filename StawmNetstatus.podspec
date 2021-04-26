@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "StawmNetstatus"
-  spec.version      = "0.8.7"
+  spec.version      = "0.8.8"
   spec.summary      = "It collects various data about the network used by the iOS app and sends the results to the specified destination."
   spec.homepage     = "https://github.com/FidelityWires/stawm-sdk-ios"
   spec.license      = "See https://github.com/FidelityWires/stawm-sdk-ios/blob/master/LICENSE"
@@ -9,5 +9,5 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "10.0"
   spec.source = { :http => 'https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmNetstatus.xcframework.zip' }
   spec.ios.vendored_frameworks = 'StawmNetstatus.xcframework'
-  spec.dependency "StawmTraceroute", "~> 0.8.7"
+  spec.dependency "StawmTraceroute", "~> 0.8.8"
 end
