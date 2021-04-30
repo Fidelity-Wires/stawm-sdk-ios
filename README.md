@@ -34,7 +34,10 @@ So **`StawmTraceroute` is required** when you use `StawmSpeedTest` or `StawmNets
 ## CocoaPods
 
 ```
-pod 'stawm-sdk-ios'
+pod 'StawmNetstatus'
+pod 'StawmServiceStatus'
+pod 'StawmSpeedTest'
+pod 'StawmTraceroute'
 ```
 
 ## Download the XCFrameworks from [Releases](https://github.com/FidelityWires/stawm-sdk-ios/releases)

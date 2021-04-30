@@ -100,6 +100,10 @@ extension NetstatusViewController: SpeedDataCollectorDelegate {
         isMeasuring = false
     }
 
+    func didCompleteSpeedTest(result: StawmSpeedTest.MeasurementResult) {
+        print("didCompleteSpeedTest: \(result)")
+    }
+
     func didFinishDataCollecting() {
         print(didFinishDataCollecting)
     }
