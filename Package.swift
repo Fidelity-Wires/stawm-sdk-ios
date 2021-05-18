@@ -32,18 +32,18 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "StawmNetstatus",
-            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmNetstatus.xcframework.zip",
-            checksum: "2f3f80ec65b66fdf30aa54af6569032b60624df51ff92831905327f48706f1a3"),
+            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/download/v0.8.9/StawmNetstatus.xcframework.zip",
+            checksum: "142c51bbb293e8664267e164a1715f9974bb666884f852cfb02b1bc52f6bc2e5"),
         .binaryTarget(
             name: "StawmTraceroute",
-            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmTraceroute.xcframework.zip",
-            checksum: "101c659df34d910670e9bbcb376bcec2eee3c45e33e36442e78b1710a26730bd"),
+            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/download/v0.8.9/StawmTraceroute.xcframework.zip",
+            checksum: "281a8ba62bcfd1443007479bc47be1453a2acc4ad7e5681060731f3195bc3204"),
         .binaryTarget(
             name: "StawmSpeedTest",
-            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmSpeedTest.xcframework.zip",
-            checksum: "ccd8b013aec98ef1e91a41db2e473f7514412ce11c641536cebaa288cfc2436e"),
+            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/download/v0.8.9/StawmSpeedTest.xcframework.zip",
+            checksum: "b55b687788f6bb44d56a987146ee761e5de09c851ad9c85272fb51fbf56784b8"),
         .binaryTarget(
             name: "StawmServiceStatus",
-            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/latest/download/StawmServiceStatus.xcframework.zip",
-            checksum: "d07e0971b45d48ad9d063130d0c997f8d5215758fe4b5e8008521de10b59e435"),    ]
+            url: "https://github.com/FidelityWires/stawm-sdk-ios/releases/download/v0.8.9/StawmServiceStatus.xcframework.zip",
+            checksum: "17c536f77cd3e432f5f499baf6cc741ff069208673a43463b3476b9b59beda13"),    ]
 )
