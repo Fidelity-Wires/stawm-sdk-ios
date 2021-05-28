@@ -3,8 +3,7 @@
 
 import PackageDescription
 
-let version = "0.8.8"
-let url = "https://github.com/FidelityWires/stawm-sdk-ios/releases/download/\(version)/"
+let url = "https://github.com/FidelityWires/stawm-sdk-ios/releases/download/v0.8.8"
 let netstatusChecksum = "2f3f80ec65b66fdf30aa54af6569032b60624df51ff92831905327f48706f1a3"
 let tracerouteChecksum = "101c659df34d910670e9bbcb376bcec2eee3c45e33e36442e78b1710a26730bd"
 let speedTestChecksum = "ccd8b013aec98ef1e91a41db2e473f7514412ce11c641536cebaa288cfc2436e"
