@@ -56,5 +56,13 @@ let package = Package(
             url: "\(url)/StawmServiceStatus.xcframework.zip",
             checksum: serviceStatusChecksum
         ),
+        .testTarget(
+            name: "PackageTests",
+            dependencies: [
+                "StawmServiceStatus",
+                "StawmSpeedTest",
+                "StawmTraceroute",
+                "StawmNetstatus"
+            ]),
     ]
 )
