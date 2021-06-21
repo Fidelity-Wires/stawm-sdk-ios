@@ -55,9 +55,9 @@ pod 'StawmTraceroute'
 
 # Usage
 
-Please add the `NSLocationWhenInUseUsageDescription` key to your app’s Info.plist file. If the required key isn’t present, location information cannot be collected.
-
-
+Please
+- add the `NSLocationWhenInUseUsageDescription` key to your app’s Info.plist file. If the required key isn’t present, location information cannot be collected.
+- enable the **Access WiFi Information** capability for your app.
 
 # Debugging
 
