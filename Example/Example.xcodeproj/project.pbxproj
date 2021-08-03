@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8703C76925B8386700419D0F /* NetstatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703C76825B8386700419D0F /* NetstatusViewController.swift */; };
 		87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */; };
 		87B400AC24B4795900B1ECA4 /* DebugSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */; };
 		87C8454F2637A33100DC30AC /* StawmSpeedTest in Frameworks */ = {isa = PBXBuildFile; productRef = 87C8454E2637A33100DC30AC /* StawmSpeedTest */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8703C76825B8386700419D0F /* NetstatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetstatusViewController.swift; sourceTree = "<group>"; };
 		87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingViewController.swift; sourceTree = "<group>"; };
 		87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingCell.swift; sourceTree = "<group>"; };
 		87CC1C2C24A075FC00EF5F3C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +76,6 @@
 				87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */,
 				87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */,
 				87CC1C3324A075FC00EF5F3C /* ViewController.swift */,
-				8703C76825B8386700419D0F /* NetstatusViewController.swift */,
 				87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */,
 				87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */,
 				87CC1C3524A075FC00EF5F3C /* Main.storyboard */,
@@ -180,7 +177,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8703C76925B8386700419D0F /* NetstatusViewController.swift in Sources */,
 				87CC1C3424A075FC00EF5F3C /* ViewController.swift in Sources */,
 				87CC1C3024A075FC00EF5F3C /* AppDelegate.swift in Sources */,
 				87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */,
