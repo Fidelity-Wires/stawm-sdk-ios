@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utM-4p-l9q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utM-4p-l9q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +20,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6bZ-2x-eBN"/>
-                        <segue destination="UCd-Zb-SNd" kind="relationship" relationship="viewControllers" id="lLc-zA-O4s"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edn-jE-0Bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -140,7 +139,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DebugSettingCell" rowHeight="48" id="pnb-QB-0bN" customClass="DebugSettingCell" customModule="Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="48"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pnb-QB-0bN" id="eb8-7Z-beb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
@@ -200,51 +199,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4E9-gG-TxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.7101449275362" y="83.705357142857139"/>
-        </scene>
-        <!--Net Status-->
-        <scene sceneID="aNT-IU-iho">
-            <objects>
-                <viewController id="UCd-Zb-SNd" customClass="NetstatusViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mME-OY-yAu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Yjw-vU-nIN">
-                                <rect key="frame" x="123.5" y="403" width="167" height="90"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebr-xP-Hkg">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="30"/>
-                                        <state key="normal" title="Start Speed Test"/>
-                                        <connections>
-                                            <action selector="speedTestButtonDidTap:" destination="UCd-Zb-SNd" eventType="touchUpInside" id="Z57-Ow-ACa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iaf-dr-w0k">
-                                        <rect key="frame" x="0.0" y="60" width="167" height="30"/>
-                                        <state key="normal" title="Start Monitor Net Status"/>
-                                        <connections>
-                                            <action selector="netstatusButtonDidTap:" destination="UCd-Zb-SNd" eventType="touchUpInside" id="yH4-aH-Jlw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="kpR-ns-7MJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Yjw-vU-nIN" firstAttribute="centerY" secondItem="mME-OY-yAu" secondAttribute="centerY" id="Gc8-S6-XXP"/>
-                            <constraint firstItem="Yjw-vU-nIN" firstAttribute="centerX" secondItem="mME-OY-yAu" secondAttribute="centerX" id="Qiy-tt-z3n"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Net Status" id="eqb-ap-OTz"/>
-                    <connections>
-                        <outlet property="netstatusButton" destination="Iaf-dr-w0k" id="MKY-ZS-DdB"/>
-                        <outlet property="speedTestButton" destination="ebr-xP-Hkg" id="kj4-Nk-8bU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RwA-xU-eCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="130" y="797"/>
         </scene>
     </scenes>
     <resources>
