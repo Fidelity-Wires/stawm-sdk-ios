@@ -11,7 +11,7 @@ Stawm SDK for iOS
 1. Open your Xcode project
 2. File > Swift Packages > Add Package Dependency
 3. Add `https://github.com/FidelityWires/stawm-sdk-ios`
-4. Select "Up to Next Major" with "0.8.8"
+4. Select "Up to Next Major"
 
 ## CocoaPods
 
