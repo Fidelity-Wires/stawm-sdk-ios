@@ -15,11 +15,7 @@ final class ViewController: UIViewController {
 
     // MARK: - StawmServiceStatus
     /// Initialize `ServiceStatusInspector`
-    private let serviceStatusInspector = ServiceStatusInspector()
-
-    @IBOutlet private weak var availableView: UIStackView!
-    @IBOutlet private weak var notAvailableView: UIStackView!
-    @IBOutlet private weak var label: UILabel!
+    private let serviceStatusInspector = ServiceStatusInspector(remoteConfig: ServiceStatusRemoteConfig())
 
     private var defaultMapView: GMSMapView?
     private var alternativeMapView: MKMapView?
@@ -43,7 +39,7 @@ final class ViewController: UIViewController {
 
             // If you would like to use Debug Mode.
             // Please go　Product -> Scheme -> Edit Scheme
-            // Set `-STAWNDebugEnabled` as `Aguments Passed On Launch`
+            // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch`
             .setDebug(settings: currentSettings)
 
         // Start inspection.
@@ -118,6 +114,11 @@ final class ViewController: UIViewController {
         }
     }
 
+    // FIXME: `Debug Setting` button is hidden.
+    // If you would like to use Debug Mode locally,
+    // Please go　Product -> Scheme -> Edit Scheme
+    // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch`
+    // And set `hidden = false` for the button on storyboard.
     /// Go to Debug Setting
     @IBAction private func buttonDidTap() {
         let viewController = DebugSettingViewController.instantiate()
@@ -126,6 +127,12 @@ final class ViewController: UIViewController {
         present(viewController, animated: true)
     }
 
+    /// Go to Remote Setting
+    @IBAction private func remoteButtonDidTap() {
+        let viewController = RemoteSettingViewController.instantiate()
+        viewController.delegate = self
+        present(viewController, animated: true)
+    }
 }
 
 extension ViewController: DebugSettingViewControllerDelegate {
@@ -133,6 +140,12 @@ extension ViewController: DebugSettingViewControllerDelegate {
     func settingDidUpdate(settings: [ServiceStatusInspector.DebugSetting]) {
         currentSettings = settings
         let _ = serviceStatusInspector.setDebug(settings: currentSettings)
+        inspect()
+    }
+}
+
+extension ViewController: RemoteSettingViewControllerDelegate {
+    func settingDidUpdate() {
         inspect()
     }
 }
