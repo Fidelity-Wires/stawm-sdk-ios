@@ -8,6 +8,8 @@
 
 import UIKit
 import StawmServiceStatus
+import GoogleMaps
+import MapKit
 
 final class ViewController: UIViewController {
 
@@ -19,11 +21,11 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var notAvailableView: UIStackView!
     @IBOutlet private weak var label: UILabel!
 
+    private var defaultMapView: GMSMapView?
+    private var alternativeMapView: MKMapView?
+
     private var currentSettings: [ServiceStatusInspector.DebugSetting] = [
-        .init(service: .googleAnalytics, status: .green),
-        .init(service: .googleConsole, status: .green),
         .init(service: .googleMaps, status: .red),
-        .init(service: .googleDrive, status: .red)
     ]
 
     private var services: [Service] {
@@ -57,13 +59,12 @@ final class ViewController: UIViewController {
                     switch result {
                     case .success(let status) where status.isAllAvailable():
                         // All serivces are available.
-                        self.availableView.isHidden = false
-                        self.notAvailableView.isHidden = true
-                    case .success(let status):
+                        self.showDefaultMap()
+                        self.alternativeMapView = nil
+                    case .success:
                         // Some services are not available.
-                        self.availableView.isHidden = true
-                        self.notAvailableView.isHidden = false
-                        self.label.text = status.serviceStatuses.unavailableServices()
+                        self.defaultMapView = nil
+                        self.showAlternativeMap()
                     case .failure(let error):
                         // Handle inspection error.
                         print(error.localizedDescription)
@@ -71,6 +72,50 @@ final class ViewController: UIViewController {
                 }
 
         })
+    }
+
+    private let center = (35.66549514200059, 139.71212428459896)
+
+    private func showDefaultMap() {
+        GMSServices.provideAPIKey("SET_API_KEY") // https://developers.google.com/maps/documentation/ios-sdk/get-api-key
+
+        let camera = GMSCameraPosition.camera(
+            withLatitude: center.0,
+            longitude: center.1,
+            zoom: 16.0)
+        let mapView = GMSMapView.map(withFrame: view.frame, camera: camera)
+        view.addSubview(mapView)
+        defaultMapView = mapView
+
+        markers.forEach { m in
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(
+                latitude: m.latidude,
+                longitude:  m.longitude)
+            marker.title = m.title
+            marker.snippet = m.snippet
+            marker.map = mapView
+        }
+    }
+
+    private func showAlternativeMap() {
+        let mapView = MKMapView(frame: view.frame)
+        let region = MKCoordinateRegion(
+            center: .init(latitude: center.0, longitude: center.1),
+            span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: false)
+        view.addSubview(mapView)
+        alternativeMapView = mapView
+
+        markers.forEach { m in
+            let marker = MKPointAnnotation()
+            marker.coordinate = CLLocationCoordinate2D(
+                latitude: m.latidude,
+                longitude:  m.longitude)
+            marker.title = m.title
+            marker.subtitle = m.snippet
+            mapView.addAnnotation(marker)
+        }
     }
 
     /// Go to Debug Setting
@@ -89,17 +134,5 @@ extension ViewController: DebugSettingViewControllerDelegate {
         currentSettings = settings
         let _ = serviceStatusInspector.setDebug(settings: currentSettings)
         inspect()
-    }
-}
-
-extension Sequence where Element == ServiceStatus {
-
-    func unavailableServices() -> String {
-        self.compactMap { (serviceStatus) -> String? in
-            if !serviceStatus.info.isAvailable {
-                return serviceStatus.info.service.service?.rawValue
-            }
-            return nil
-        }.joined(separator: "\n")
     }
 }

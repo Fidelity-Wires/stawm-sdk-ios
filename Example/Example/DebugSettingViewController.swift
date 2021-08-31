@@ -9,7 +9,7 @@
 import UIKit
 import StawmServiceStatus
 
-protocol DebugSettingViewControllerDelegate: class {
+protocol DebugSettingViewControllerDelegate: AnyObject {
 
     func settingDidUpdate(settings: [ServiceStatusInspector.DebugSetting])
 }
