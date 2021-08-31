@@ -11,7 +11,7 @@
 		87994B6826DE14C100D16FDA /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87994B6726DE14C100D16FDA /* Marker.swift */; };
 		87B400AA24B45C7500B1ECA4 /* DebugSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400A924B45C7500B1ECA4 /* DebugSettingViewController.swift */; };
 		87B400AC24B4795900B1ECA4 /* DebugSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B400AB24B4795900B1ECA4 /* DebugSettingCell.swift */; };
-		87C845532637A33100DC30AC /* StawmServiceStatus in Frameworks */ = {isa = PBXBuildFile; productRef = 87C845522637A33100DC30AC /* StawmServiceStatus */; };
+		87C845532637A33100DC30AC /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 87C845522637A33100DC30AC /* SwiftPackageProductDependency */; };
 		87CC1C3024A075FC00EF5F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C2F24A075FC00EF5F3C /* AppDelegate.swift */; };
 		87CC1C3224A075FC00EF5F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C3124A075FC00EF5F3C /* SceneDelegate.swift */; };
 		87CC1C3424A075FC00EF5F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CC1C3324A075FC00EF5F3C /* ViewController.swift */; };
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C845532637A33100DC30AC /* StawmServiceStatus in Frameworks */,
+				87C845532637A33100DC30AC /* BuildFile in Frameworks */,
 				1BE5446354F39500B11E1D11 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +122,7 @@
 				87CC1C2924A075FC00EF5F3C /* Frameworks */,
 				87CC1C2A24A075FC00EF5F3C /* Resources */,
 				A7249C35B9F421FDB4468996 /* [CP] Copy Pods Resources */,
+				3C7069CD1CCE33F9C6707B05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,7 +130,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				87C845522637A33100DC30AC /* StawmServiceStatus */,
+				87C845522637A33100DC30AC /* SwiftPackageProductDependency */,
 			);
 			productName = Example;
 			productReference = 87CC1C2C24A075FC00EF5F3C /* Example.app */;
@@ -160,7 +161,7 @@
 			);
 			mainGroup = 87CC1C2324A075FC00EF5F3C;
 			packageReferences = (
-				87C8454D2637A33100DC30AC /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */,
+				87C8454D2637A33100DC30AC /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 87CC1C2D24A075FC00EF5F3C /* Products */;
 			projectDirPath = "";
@@ -185,6 +186,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3C7069CD1CCE33F9C6707B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7AAF3426E1E8E5D37F2CE33A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,7 +470,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		87C8454D2637A33100DC30AC /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */ = {
+		87C8454D2637A33100DC30AC /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FidelityWires/stawm-sdk-ios.git";
 			requirement = {
@@ -463,9 +481,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		87C845522637A33100DC30AC /* StawmServiceStatus */ = {
+		87C845522637A33100DC30AC /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 87C8454D2637A33100DC30AC /* XCRemoteSwiftPackageReference "stawm-sdk-ios" */;
+			package = 87C8454D2637A33100DC30AC /* RemoteSwiftPackageReference */;
 			productName = StawmServiceStatus;
 		};
 /* End XCSwiftPackageProductDependency section */

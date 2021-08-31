@@ -7,5 +7,5 @@ target 'Example' do
 
   # Pods for Example
   pod 'GoogleMaps', '5.1.0'
-
+  pod 'Firebase/RemoteConfig'
 end
