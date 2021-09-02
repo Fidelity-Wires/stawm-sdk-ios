@@ -9,7 +9,7 @@
 import UIKit
 import StawmServiceStatus
 
-protocol DebugSettingViewControllerDelegate: class {
+protocol DebugSettingViewControllerDelegate: AnyObject {
 
     func settingDidUpdate(settings: [ServiceStatusInspector.DebugSetting])
 }
@@ -18,7 +18,7 @@ final class DebugSettingViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
 
-    var delegate: DebugSettingViewControllerDelegate?
+    weak var delegate: DebugSettingViewControllerDelegate?
 
     var settings: [ServiceStatusInspector.DebugSetting] = []
 

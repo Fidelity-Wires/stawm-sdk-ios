@@ -8,22 +8,25 @@
 
 import UIKit
 import StawmServiceStatus
+import GoogleMaps
+import MapKit
+import Mapbox
 
 final class ViewController: UIViewController {
 
     // MARK: - StawmServiceStatus
     /// Initialize `ServiceStatusInspector`
-    private let serviceStatusInspector = ServiceStatusInspector()
 
-    @IBOutlet private weak var availableView: UIStackView!
-    @IBOutlet private weak var notAvailableView: UIStackView!
-    @IBOutlet private weak var label: UILabel!
+    /* If you would like to use RemoteConfig to debug */
+    // Please set up Firebase project and add `GoogleService-Info.plist` in this app project.
+    private let serviceStatusInspector = ServiceStatusInspector(remoteConfig: ServiceStatusRemoteConfig())
+    // Otherwise use `private let serviceStatusInspector = ServiceStatusInspector()` and **Local Debug Mode**.
+
+    private var defaultMapView: GMSMapView?
+    private var alternativeMapView: UIView?
 
     private var currentSettings: [ServiceStatusInspector.DebugSetting] = [
-        .init(service: .googleAnalytics, status: .green),
-        .init(service: .googleConsole, status: .green),
         .init(service: .googleMaps, status: .red),
-        .init(service: .googleDrive, status: .red)
     ]
 
     private var services: [Service] {
@@ -39,10 +42,10 @@ final class ViewController: UIViewController {
 
         let _ = serviceStatusInspector
 
-            // If you would like to use Debug Mode.
+            /* If you would like to use **Local Debug Mode** */
             // Please go　Product -> Scheme -> Edit Scheme
-            // Set `-STAWNDebugEnabled` as `Aguments Passed On Launch`
-            .setDebug(settings: currentSettings)
+            // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch` and uncomment the following line.
+            // .setDebug(settings: currentSettings)
 
         // Start inspection.
         inspect()
@@ -57,13 +60,12 @@ final class ViewController: UIViewController {
                     switch result {
                     case .success(let status) where status.isAllAvailable():
                         // All serivces are available.
-                        self.availableView.isHidden = false
-                        self.notAvailableView.isHidden = true
-                    case .success(let status):
+                        self.showDefaultMap()
+                        self.alternativeMapView = nil
+                    case .success:
                         // Some services are not available.
-                        self.availableView.isHidden = true
-                        self.notAvailableView.isHidden = false
-                        self.label.text = status.serviceStatuses.unavailableServices()
+                        self.defaultMapView = nil
+                        self.showAlternativeMap(type: .mapbox)
                     case .failure(let error):
                         // Handle inspection error.
                         print(error.localizedDescription)
@@ -73,6 +75,95 @@ final class ViewController: UIViewController {
         })
     }
 
+    private let center = (35.66549514200059, 139.71212428459896)
+
+    private func showDefaultMap() {
+        /* If you would like to use Google Maps */
+        // Please set your API key if you would like to use Google Maps.
+        // https://developers.google.com/maps/documentation/ios-sdk/get-api-key
+        GMSServices.provideAPIKey("SET_API_KEY")
+
+        let camera = GMSCameraPosition.camera(
+            withLatitude: center.0,
+            longitude: center.1,
+            zoom: 16.0)
+        let mapView = GMSMapView.map(withFrame: view.frame, camera: camera)
+        view.addSubview(mapView)
+        defaultMapView = mapView
+
+        markers.forEach { m in
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(
+                latitude: m.latidude,
+                longitude:  m.longitude)
+            marker.title = m.title
+            marker.snippet = m.snippet
+            marker.map = mapView
+        }
+    }
+
+    enum MapType {
+        case apple
+        case mapbox
+    }
+
+    private func showAlternativeMap(type: MapType) {
+        switch type {
+        case .apple: showAppleMap()
+        case .mapbox: showMapbox()
+        }
+    }
+
+    private func showAppleMap() {
+        let mapView = MKMapView(frame: view.frame)
+        let region = MKCoordinateRegion(
+            center: .init(latitude: center.0, longitude: center.1),
+            span: .init(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: false)
+        view.addSubview(mapView)
+        alternativeMapView = mapView
+
+        markers.forEach { m in
+            let marker = MKPointAnnotation()
+            marker.coordinate = CLLocationCoordinate2D(
+                latitude: m.latidude,
+                longitude:  m.longitude)
+            marker.title = m.title
+            marker.subtitle = m.snippet
+            mapView.addAnnotation(marker)
+        }
+    }
+
+    private func showMapbox() {
+        /* If you would like to use Mapbox Maps */
+        // Please set your API key in `Info.plist`.
+        // https://docs.mapbox.com/ios/maps/guides/
+        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
+        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.setCenter(
+            CLLocationCoordinate2D(latitude: center.0, longitude: center.1),
+            zoomLevel: 15,
+            animated: false)
+        view.addSubview(mapView)
+        alternativeMapView = mapView
+
+        markers.forEach { m in
+            let marker = MGLPointAnnotation()
+            marker.coordinate = CLLocationCoordinate2D(
+                latitude: m.latidude,
+                longitude:  m.longitude)
+            marker.title = m.title
+            marker.subtitle = m.snippet
+            mapView.addAnnotation(marker)
+        }
+    }
+
+    // FIXME: `Debug Setting` button is hidden.
+    // If you would like to use **Local Debug Mode**,
+    // Please go　Product -> Scheme -> Edit Scheme
+    // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch`
+    // And set `hidden = false` for the button on storyboard.
     /// Go to Debug Setting
     @IBAction private func buttonDidTap() {
         let viewController = DebugSettingViewController.instantiate()
@@ -81,6 +172,12 @@ final class ViewController: UIViewController {
         present(viewController, animated: true)
     }
 
+    /// Go to Remote Setting
+    @IBAction private func remoteButtonDidTap() {
+        let viewController = RemoteSettingViewController.instantiate()
+        viewController.delegate = self
+        present(viewController, animated: true)
+    }
 }
 
 extension ViewController: DebugSettingViewControllerDelegate {
@@ -92,14 +189,8 @@ extension ViewController: DebugSettingViewControllerDelegate {
     }
 }
 
-extension Sequence where Element == ServiceStatus {
-
-    func unavailableServices() -> String {
-        self.compactMap { (serviceStatus) -> String? in
-            if !serviceStatus.info.isAvailable {
-                return serviceStatus.info.service.service?.rawValue
-            }
-            return nil
-        }.joined(separator: "\n")
+extension ViewController: RemoteSettingViewControllerDelegate {
+    func settingDidUpdate() {
+        inspect()
     }
 }

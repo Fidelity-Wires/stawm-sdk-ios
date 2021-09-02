@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utM-4p-l9q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,96 +19,47 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6bZ-2x-eBN"/>
+                        <segue destination="pGU-wK-bbz" kind="relationship" relationship="viewControllers" id="QiR-bf-ZRl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edn-jE-0Bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-970" y="92"/>
+            <point key="canvasLocation" x="-1478" y="86"/>
         </scene>
-        <!--Service Status-->
+        <!--Free WiFi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-9w-dDh">
-                                <rect key="frame" x="157.5" y="703" width="99" height="30"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Free WiFi" id="R5b-rO-0qH">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="m7Q-Xx-UYi">
+                            <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7aG-9w-dDh">
+                                <rect key="frame" x="20" y="7" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Debug Setting"/>
                                 <connections>
                                     <action selector="buttonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpA-EN-dn0"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-LJ-2JA">
-                                <rect key="frame" x="40" y="354.5" width="334" height="187"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rzG-Ua-Nts">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All services available." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBJ-X6-BMb">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <color key="textColor" red="0.41568627450000001" green="0.7725490196" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fDh-vF-BoH">
-                                        <rect key="frame" x="0.0" y="39" width="334" height="148"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4nV-cK-39R">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Not available: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8k-gS-gvq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                        <color key="textColor" systemColor="systemOrangeColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GW3-CC-axk">
-                                                <rect key="frame" x="0.0" y="28" width="334" height="120"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IC-eW-ydO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="120"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="6IC-eW-ydO" secondAttribute="bottom" id="SXc-Mg-TYp"/>
-                                                    <constraint firstItem="6IC-eW-ydO" firstAttribute="top" secondItem="GW3-CC-axk" secondAttribute="top" id="ohW-Hh-H9u"/>
-                                                    <constraint firstItem="6IC-eW-ydO" firstAttribute="leading" secondItem="GW3-CC-axk" secondAttribute="leading" id="uDf-CJ-Tgm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="6IC-eW-ydO" secondAttribute="trailing" id="z5c-Pg-eaw"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ghd-LJ-2JA" secondAttribute="trailing" constant="40" id="1P9-8M-lCy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7aG-9w-dDh" secondAttribute="bottom" constant="80" id="51E-dU-RLm"/>
-                            <constraint firstItem="Ghd-LJ-2JA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ObR-uo-vc1"/>
-                            <constraint firstItem="Ghd-LJ-2JA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W9X-dH-66B"/>
-                            <constraint firstItem="Ghd-LJ-2JA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yej-Ni-J48"/>
-                            <constraint firstItem="7aG-9w-dDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="re1-B9-pw5"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Service Status" id="odE-Dq-Dwg"/>
-                    <connections>
-                        <outlet property="availableView" destination="rzG-Ua-Nts" id="jRn-he-bnN"/>
-                        <outlet property="label" destination="6IC-eW-ydO" id="wUr-4C-VbE"/>
-                        <outlet property="notAvailableView" destination="fDh-vF-BoH" id="7xK-sJ-Hps"/>
-                    </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Fjg-Hy-gIJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="pEF-S0-6Tx">
+                                <rect key="frame" x="295" y="7" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Remote Setting"/>
+                                <connections>
+                                    <action selector="remoteButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kyu-ze-jcU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,13 +151,70 @@
             </objects>
             <point key="canvasLocation" x="1079.7101449275362" y="83.705357142857139"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="P4d-NQ-8ge">
+            <objects>
+                <navigationController id="pGU-wK-bbz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="location.fill.viewfinder" catalog="system" id="ul1-lq-dxf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3U1-z0-5sx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="r5O-eP-42T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqe-u5-WuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-635" y="84"/>
+        </scene>
+        <!--Remote Setting View Controller-->
+        <scene sceneID="Ufg-75-CGm">
+            <objects>
+                <viewController storyboardIdentifier="RemoteSettingViewController" id="eW6-aJ-DpQ" customClass="RemoteSettingViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfL-CH-YxG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-vB-wop">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Remote Setting" id="whX-vS-FGE">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Zho-ht-hXG">
+                                            <connections>
+                                                <action selector="closeDidTap" destination="eW6-aJ-DpQ" id="Aur-UG-tXD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait for remote configuration." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-0s-1gr">
+                                <rect key="frame" x="93.5" y="437.5" width="227" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y5V-5y-Q8I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DGg-0s-1gr" firstAttribute="centerX" secondItem="xfL-CH-YxG" secondAttribute="centerX" id="36J-n1-KiI"/>
+                            <constraint firstItem="ez9-vB-wop" firstAttribute="top" secondItem="Y5V-5y-Q8I" secondAttribute="top" id="BFM-Ts-D7t"/>
+                            <constraint firstItem="DGg-0s-1gr" firstAttribute="centerY" secondItem="xfL-CH-YxG" secondAttribute="centerY" id="gF4-ge-Sob"/>
+                            <constraint firstItem="Y5V-5y-Q8I" firstAttribute="trailing" secondItem="ez9-vB-wop" secondAttribute="trailing" id="hql-Fm-fpF"/>
+                            <constraint firstItem="ez9-vB-wop" firstAttribute="leading" secondItem="xfL-CH-YxG" secondAttribute="leading" id="wxC-v7-1W1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rul-o8-4Ru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="757"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="location.fill.viewfinder" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
