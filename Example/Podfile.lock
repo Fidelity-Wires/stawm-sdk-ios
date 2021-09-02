@@ -42,6 +42,9 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.5.1)"
   - GoogleUtilities/UserDefaults (7.5.1):
     - GoogleUtilities/Logger
+  - Mapbox-iOS-SDK (6.3.0):
+    - MapboxMobileEvents (~> 0.10.4)
+  - MapboxMobileEvents (0.10.11)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -52,6 +55,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/RemoteConfig
   - GoogleMaps (= 5.1.0)
+  - Mapbox-iOS-SDK (~> 6.3.0)
 
 SPEC REPOS:
   trunk:
@@ -64,6 +68,8 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleMaps
     - GoogleUtilities
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
     - nanopb
     - PromisesObjC
 
@@ -77,9 +83,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleMaps: 086ae1dab659eaa7339bdb30fc88e2f44e7c597c
   GoogleUtilities: 3df19e3c24f7bbc291d8b5809aa6b0d41e642437
+  Mapbox-iOS-SDK: 2563ed87ead6ec08f1c2090873977b8a7be335a8
+  MapboxMobileEvents: 1176afebbeca86806614a3dc409840bc02a3dd89
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 579353df284603669f50cab26ae673c0a66a3e25
+PODFILE CHECKSUM: f338ab4c0a30838def11e395a2e7b63c7b41e418
 
 COCOAPODS: 1.10.0

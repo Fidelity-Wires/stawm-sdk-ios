@@ -10,6 +10,7 @@ import UIKit
 import StawmServiceStatus
 import GoogleMaps
 import MapKit
+import Mapbox
 
 final class ViewController: UIViewController {
 
@@ -18,7 +19,7 @@ final class ViewController: UIViewController {
     private let serviceStatusInspector = ServiceStatusInspector(remoteConfig: ServiceStatusRemoteConfig())
 
     private var defaultMapView: GMSMapView?
-    private var alternativeMapView: MKMapView?
+    private var alternativeMapView: UIView?
 
     private var currentSettings: [ServiceStatusInspector.DebugSetting] = [
         .init(service: .googleMaps, status: .red),
@@ -60,7 +61,7 @@ final class ViewController: UIViewController {
                     case .success:
                         // Some services are not available.
                         self.defaultMapView = nil
-                        self.showAlternativeMap()
+                        self.showAlternativeMap(type: .mapbox)
                     case .failure(let error):
                         // Handle inspection error.
                         print(error.localizedDescription)
@@ -73,7 +74,9 @@ final class ViewController: UIViewController {
     private let center = (35.66549514200059, 139.71212428459896)
 
     private func showDefaultMap() {
-        GMSServices.provideAPIKey("SET_API_KEY") // https://developers.google.com/maps/documentation/ios-sdk/get-api-key
+        // FIXME: Please set your API key if you would like to use Google Maps.
+        // https://developers.google.com/maps/documentation/ios-sdk/get-api-key
+        GMSServices.provideAPIKey("SET_API_KEY")
 
         let camera = GMSCameraPosition.camera(
             withLatitude: center.0,
@@ -94,7 +97,19 @@ final class ViewController: UIViewController {
         }
     }
 
-    private func showAlternativeMap() {
+    enum MapType {
+        case apple
+        case mapbox
+    }
+
+    private func showAlternativeMap(type: MapType) {
+        switch type {
+        case .apple: showAppleMap()
+        case .mapbox: showMapbox()
+        }
+    }
+
+    private func showAppleMap() {
         let mapView = MKMapView(frame: view.frame)
         let region = MKCoordinateRegion(
             center: .init(latitude: center.0, longitude: center.1),
@@ -105,6 +120,30 @@ final class ViewController: UIViewController {
 
         markers.forEach { m in
             let marker = MKPointAnnotation()
+            marker.coordinate = CLLocationCoordinate2D(
+                latitude: m.latidude,
+                longitude:  m.longitude)
+            marker.title = m.title
+            marker.subtitle = m.snippet
+            mapView.addAnnotation(marker)
+        }
+    }
+
+    private func showMapbox() {
+        // FIXME: Please set your API key in `Info.plist` before using Mapbox Maps.
+        // https://docs.mapbox.com/ios/maps/guides/
+        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
+        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.setCenter(
+            CLLocationCoordinate2D(latitude: center.0, longitude: center.1),
+            zoomLevel: 15,
+            animated: false)
+        view.addSubview(mapView)
+        alternativeMapView = mapView
+
+        markers.forEach { m in
+            let marker = MGLPointAnnotation()
             marker.coordinate = CLLocationCoordinate2D(
                 latitude: m.latidude,
                 longitude:  m.longitude)

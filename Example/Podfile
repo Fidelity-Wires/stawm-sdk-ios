@@ -8,4 +8,5 @@ target 'Example' do
   # Pods for Example
   pod 'GoogleMaps', '5.1.0'
   pod 'Firebase/RemoteConfig'
+  pod 'Mapbox-iOS-SDK', '~> 6.3.0'
 end
