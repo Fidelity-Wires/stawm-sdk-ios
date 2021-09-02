@@ -16,7 +16,11 @@ final class ViewController: UIViewController {
 
     // MARK: - StawmServiceStatus
     /// Initialize `ServiceStatusInspector`
+
+    /* If you would like to use RemoteConfig to debug */
+    // Please set up Firebase project and add `GoogleService-Info.plist` in this app project.
     private let serviceStatusInspector = ServiceStatusInspector(remoteConfig: ServiceStatusRemoteConfig())
+    // Otherwise use `private let serviceStatusInspector = ServiceStatusInspector()` and **Local Debug Mode**.
 
     private var defaultMapView: GMSMapView?
     private var alternativeMapView: UIView?
@@ -38,10 +42,10 @@ final class ViewController: UIViewController {
 
         let _ = serviceStatusInspector
 
-            // If you would like to use Debug Mode.
+            /* If you would like to use **Local Debug Mode** */
             // Please go　Product -> Scheme -> Edit Scheme
-            // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch`
-            .setDebug(settings: currentSettings)
+            // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch` and uncomment the following line.
+            // .setDebug(settings: currentSettings)
 
         // Start inspection.
         inspect()
@@ -74,7 +78,8 @@ final class ViewController: UIViewController {
     private let center = (35.66549514200059, 139.71212428459896)
 
     private func showDefaultMap() {
-        // FIXME: Please set your API key if you would like to use Google Maps.
+        /* If you would like to use Google Maps */
+        // Please set your API key if you would like to use Google Maps.
         // https://developers.google.com/maps/documentation/ios-sdk/get-api-key
         GMSServices.provideAPIKey("SET_API_KEY")
 
@@ -130,7 +135,8 @@ final class ViewController: UIViewController {
     }
 
     private func showMapbox() {
-        // FIXME: Please set your API key in `Info.plist` before using Mapbox Maps.
+        /* If you would like to use Mapbox Maps */
+        // Please set your API key in `Info.plist`.
         // https://docs.mapbox.com/ios/maps/guides/
         let url = URL(string: "mapbox://styles/mapbox/streets-v11")
         let mapView = MGLMapView(frame: view.bounds, styleURL: url)
@@ -154,7 +160,7 @@ final class ViewController: UIViewController {
     }
 
     // FIXME: `Debug Setting` button is hidden.
-    // If you would like to use Debug Mode locally,
+    // If you would like to use **Local Debug Mode**,
     // Please go　Product -> Scheme -> Edit Scheme
     // Set `-STAWNDebugEnabled` ON as `Aguments Passed On Launch`
     // And set `hidden = false` for the button on storyboard.
